@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.karanjain.weconnect.CreateUserActivity">
+
+
+
+    <TextView
+        android:text="SIGN UP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/signUpText"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nicknameText"
+        android:textSize="26sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="25"
+        android:id="@+id/nickName"
+        android:hint="Enter nickname"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:layout_alignBaseline="@+id/nicknameText"
+        android:layout_alignBottom="@+id/nicknameText"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailText"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif"
+        android:layout_alignBaseline="@+id/emailAddress"
+        android:layout_alignBottom="@+id/emailAddress"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/nicknameText"
+        android:layout_below="@+id/nicknameText"
+        android:layout_marginTop="10dp"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailAddress"
+        android:hint="Enter Email (Ideally-Min 8 digit,1 special char, 1 num,1 upper case)"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/nickName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_alignStart="@+id/nickName" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordText"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif"
+        android:layout_alignBaseline="@+id/password"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:hint="Enter password"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/emailAddress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignStart="@+id/emailAddress" />
+
+    <TextView
+        android:text="Country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countryText"
+        android:textSize="26sp"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignEnd="@+id/passwordText"
+        android:textAlignment="textEnd" />
+
+    <Spinner
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:minHeight="55dp"
+        android:minWidth="250dp"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:text="State"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stateText"
+        android:textSize="26sp"
+        android:layout_alignBaseline="@+id/countryText"
+        android:layout_alignBottom="@+id/countryText"
+        android:layout_toStartOf="@+id/state"
+        android:layout_marginEnd="56dp"
+        android:textAlignment="textEnd" />
+
+    <Spinner
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="55dp"
+        android:minWidth="250dp"
+        android:spinnerMode="dialog"
+        android:layout_alignTop="@+id/country"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="City"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityText"
+        android:textSize="26sp"
+        android:layout_alignTop="@+id/city"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/emailText"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="@integer/google_play_services_version"
+        android:id="@+id/city"
+        android:hint="Enter City"
+        android:textSize="24sp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/country"
+        android:layout_alignStart="@+id/country"
+        android:layout_alignEnd="@+id/country" />
+
+    <TextView
+        android:text="Year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearText"
+        android:textSize="26sp"
+        android:layout_alignBaseline="@+id/year"
+        android:layout_alignBottom="@+id/year"
+        android:layout_alignEnd="@+id/stateText"
+        android:textAlignment="textEnd" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="@integer/google_play_services_version"
+        android:id="@+id/year"
+        android:textSize="24sp"
+        android:layout_alignStart="@+id/state"
+        android:layout_alignBottom="@+id/city"
+        android:layout_alignEnd="@+id/state"
+        android:layout_alignTop="@+id/city"
+        android:hint="Enter year" />
+
+    <TextView
+        android:text="Latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latitudeText"
+        android:textSize="26sp"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/latitude"
+        android:layout_alignBottom="@+id/latitude"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/cityText" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/city"
+        android:layout_alignStart="@+id/city" />
+
+    <TextView
+        android:text="Longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/longitudeText"
+        android:textSize="26sp"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@+id/longitude"
+        android:layout_alignEnd="@+id/latitudeText" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:width="250dp"
+        android:textSize="24sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/latitude"
+        android:layout_alignStart="@+id/latitude" />
+
+    <Button
+        android:text="Set Location"
+        android:id="@+id/setLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/latitude"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/year" />
+
+
+    <Button
+        android:text="Register User"
+        android:id="@+id/registerUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/setLocation"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
